@@ -4,7 +4,7 @@ title: "Custom House Portraits"
 author: "Laszlo Andrasi"
 categories: services
 tags: [documentation]
-image: Services/2023-07_Home.jpg
+image: Services/House-portrait_PencilW.png
 ---
 
 ## **House Portrait Services**

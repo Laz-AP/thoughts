@@ -3,8 +3,8 @@ layout: post
 title: "Custom House Portraits"
 author: "Laszlo Andrasi"
 categories: services
-tags: [posts]
-image: Services/House Portrait_Pencil1.jpg
+tags: [documentation]
+image: Services/2023-07_Home.jpg
 ---
 
 ## **House Portrait Services**
@@ -28,7 +28,7 @@ If you appreciate the beauty of hand-rendered architecture, you can own a custom
 - Offers a **soft, expressive, and vibrant** representation of the space.
 - Perfect for those who appreciate traditional painting techniques.
 
-<img src="https://laz-ap.github.io/thoughts/assets/img/Services/2023-07_Home.jpg" style="width:100%; max-width:1024px; height:auto;">
+<img src="https://laz-ap.github.io/thoughts/assets/img/Services/2024-08_FLW Robie House_Hyde Park Chicago.png" style="width:100%; max-width:1024px; height:auto;">
 
 ---
 

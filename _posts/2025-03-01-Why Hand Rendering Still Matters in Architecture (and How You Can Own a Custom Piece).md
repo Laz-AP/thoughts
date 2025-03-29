@@ -2,7 +2,7 @@
 layout: post
 title: "Why Hand Rendering Still Matters in Architecture (and How You Can Own a Custom Piece)"
 author: "Laszlo Andrasi"
-categories: services
+categories: Posts
 tags: [posts]
 image: Services/Bali-Tablet-Sketch.jpg
 ---

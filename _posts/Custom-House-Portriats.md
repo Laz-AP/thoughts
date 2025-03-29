@@ -3,7 +3,7 @@ layout: post
 title: "Custom House Portraits"
 author: "Laszlo Andrasi"
 categories: services
-tags: [posts]
+tags: [documentation]
 image: Services/Bali-Tablet-Sketch.jpg
 ---
 

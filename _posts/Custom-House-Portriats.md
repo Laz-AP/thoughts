@@ -3,8 +3,8 @@ layout: post
 title: "Custom House Portraits"
 author: "Laszlo Andrasi"
 categories: services
-tags: [documentation]
-image: Services/Bali-Tablet-Sketch.jpg
+tags: [posts]
+image: Services/House Portrait_Pencil1.jpg
 ---
 
 ## **House Portrait Services**
@@ -15,7 +15,7 @@ If you appreciate the beauty of hand-rendered architecture, you can own a custom
 - Ideal for those who appreciate classic architectural sketches.
 - Perfect for **framing, gifts, or adding a timeless touch** to a space.
 
-<img src="https://laz-ap.github.io/thoughts/assets/img/Services/Pencil House Portrait_1.jpg" style="width:100%; max-width:1024px; height:auto;">
+<img src="https://laz-ap.github.io/thoughts/assets/img/Services/House Portrait_Pencil 2.jpg" style="width:100%; max-width:1024px; height:auto;">
 
 ### **Digital Rendering**
 - A full-color artistic interpretation of a home or building, created digitally with a painterly aesthetic.

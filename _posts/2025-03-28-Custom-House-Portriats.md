@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2025-03-28-Custom House Portraits"
+title: "Custom House Portraits"
 author: "Laszlo Andrasi"
 categories: services
 tags: [posts]

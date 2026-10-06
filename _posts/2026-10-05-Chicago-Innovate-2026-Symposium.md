@@ -4,7 +4,7 @@ title: "Chicago Innovate 2026 – Symposium"
 author: "Laszlo Andrasi"
 categories: Posts
 tags: [posts]
-image: Chicago-Innovate-2026/350A0077.jpg
+image: Chicago-Innovate-2026/Chicago-Innovate-Logo.jpg
 ---
 
 To understand the story of architecture is to understand that it is a story of innovation. Throughout human history, we have continuously worked to improve the places where we live and work. Our access to technology, tools, and better materials has allowed architects and engineers to push the boundaries of what is feasible, while contractors and tradespeople provide the practical feedback that continues the innovation loop. Architecture is a story of innovation because buildings bring together people from many walks of life. Many of the major innovations in the AEC industry have been tools for improving communication among all parties.

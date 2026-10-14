@@ -1,0 +1,34 @@
+# One entry per building on the map. Add an entry and it appears on the map and in the list.
+# kind: video (coral) | site (dashed, site only) | project (black, built work)
+# Image paths are relative to assets/img/. post is the page address on this site.
+# footprint is optional (GeoJSON polygon coordinates); otherwise the outline comes from the map data.
+- id: home-insurance
+  name: Home Insurance Building site
+  region: Chicago Loop
+  story: Building story 01
+  kind: video
+  lat: 41.87972
+  lng: -87.63194
+  summary: The 1884 Jenney building often called the first skyscraper. Demolished in 1931.
+  sketch: Buildings/home-insurance/sketch.jpg
+  thumbs:
+    - Buildings/home-insurance/sketch.jpg
+    - Buildings/home-insurance/title.jpg
+  video: https://www.youtube.com/watch?v=rs1UtLpayuA
+  post: Home-Insurance-Building-Site
+  footprint: [[[-87.632049,41.879608],[-87.631831,41.879608],[-87.631831,41.879832],[-87.632049,41.879832],[-87.632049,41.879608]]]
+- id: monadnock
+  name: Monadnock Building
+  region: Chicago Loop
+  story: Building story 02
+  kind: video
+  lat: 41.877706
+  lng: -87.629494
+  summary: Sixteen stories of load-bearing brick, once the tallest of its kind.
+  sketch: Buildings/monadnock/line-drawing.jpg
+  thumbs:
+    - Buildings/monadnock/line-drawing.jpg
+    - Buildings/monadnock/colorized.jpg
+    - Buildings/monadnock/title.jpg
+  video: https://www.youtube.com/watch?v=q4H36vUXXDM
+  post: Monadnock-Building

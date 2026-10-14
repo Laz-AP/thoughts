@@ -1,0 +1,33 @@
+# Content for the draft homepage (/home-draft). Edit here; the page rebuilds from this file.
+episode:
+  eyebrow: Latest episode
+  title: The Monadnock Building
+  video_id: q4H36vUXXDM
+  post: Monadnock-Building
+  thumbs:
+    - {img: Buildings/monadnock/line-drawing.jpg, label: Pen sketch}
+    - {img: Buildings/monadnock/colorized.jpg, label: Colorized}
+
+sketches:
+  - {img: Home/sketch-1.jpg, label: Monadnock Building}
+  - {img: Home/sketch-2.jpg, label: Home Insurance Building}
+  - {img: Home/sketch-3.jpg, label: Bali pool deck}
+  - {img: Home/sketch-4.jpg, label: "FLW Studio, Oak Park"}
+  - {img: Home/sketch-5.jpg, label: Campus plan}
+  - {img: Home/sketch-6.jpg, label: Robie House}
+
+about:
+  photo: Home/about.jpg
+  text: "I'm Laz, an architect, artist and tech enthusiast. I'm the Design Application Manager for the Chicago studio of Perkins&Will, where I lead digital initiatives, and I teach and sketch on the side."
+
+commissions:
+  - {img: Home/commission-pencil.jpg, label: Pencil sketch}
+  - {img: Home/commission-digital.jpg, label: Digital rendering}
+  - {img: Home/commission-watercolor.jpg, label: Watercolor}
+
+follow:
+  - {label: Instagram, url: "https://www.instagram.com/laszlo_architectpalette/"}
+  - {label: YouTube, url: "https://www.youtube.com/@ArchitectsPalette"}
+  - {label: LinkedIn, url: "https://www.linkedin.com/in/laszlo-andrasi-architecture/"}
+  - {label: All posts, url: "https://laz-ap.github.io/thoughts/posts"}
+  - {label: Contact, url: "https://laz-ap.github.io/thoughts/contact"}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{% if page.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
+<title>{% if page.noindex %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="icon" href="https://laz-ap.github.io/thoughts/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="https://laz-ap.github.io/thoughts/assets/map/map.css">
+<link rel="stylesheet" href="https://laz-ap.github.io/thoughts/assets/home/home.css">
+</head>
+<body class="home">
+{% assign root = "https://laz-ap.github.io/thoughts" %}
+{% assign img = root | append: "/assets/img/" %}
+<header class="site">
+  <a class="brand" href="{{ root }}/">Architect's Palette</a>
+  <nav aria-label="Sections">
+    <a href="#map-section">Map</a><a href="#episodes">Episodes</a><a href="#sketches">Sketches</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#commissions">Commissions</a>
+  </nav>
+</header>
+
+<section id="map-section" class="wrap first">
+  <nav id="regions" aria-label="Jump to area"></nav>
+  <div id="main" class="map-hero">
+    <div id="map" aria-label="Map of Chicago buildings"></div>
+    <div class="toggle" role="group" aria-label="View"><button id="bMap" aria-pressed="true">Map</button><button id="bList" aria-pressed="false">List</button></div>
+    <div class="legend" id="legend"></div>
+    <div id="list"></div>
+    <section class="card" id="card" aria-live="polite"></section>
+    <a class="fullmap" href="{{ root }}/map-draft">Open full map</a>
+  </div>
+  <noscript><p>The interactive map needs JavaScript. Read the stories on the <a href="{{ root }}/posts">posts page</a>.</p></noscript>
+</section>
+
+<section id="episodes" class="wrap">
+  <h2>{{ site.data.home.episode.eyebrow }}</h2>
+  <div class="episode">
+    <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{{ site.data.home.episode.video_id }}" title="{{ site.data.home.episode.title }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="ep-info">
+      <div class="mono">{{ site.data.home.episode.eyebrow | upcase }}</div>
+      <div class="ep-title">{{ site.data.home.episode.title }}</div>
+      <div class="ep-thumbs">
+        {% for t in site.data.home.episode.thumbs %}
+        <figure><img src="{{ img }}{{ t.img }}" alt="{{ t.label }}" loading="lazy"><figcaption>{{ t.label }}</figcaption></figure>
+        {% endfor %}
+      </div>
+      <p><a href="{{ root }}/{{ site.data.home.episode.post }}">Read the write-up</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="sketches" class="wrap">
+  <h2>Walk + Sketch</h2>
+  <div class="sketch-grid">
+    {% for s in site.data.home.sketches %}
+    <a href="https://www.instagram.com/laszlo_architectpalette/" class="sk"><img src="{{ img }}{{ s.img }}" alt="Sketch: {{ s.label }}" loading="lazy"><span>{{ s.label }}</span></a>
+    {% endfor %}
+  </div>
+  <p><a href="https://www.instagram.com/laszlo_architectpalette/">More on Instagram</a> · <a href="https://www.youtube.com/@ArchitectsPalette">and YouTube</a></p>
+</section>
+
+<section id="practice" class="wrap">
+  <h2>Practice Notes</h2>
+  {% assign notes = site.posts | where_exp: "p", "p.categories contains 'Posts'" %}
+  <div class="notes">
+    {% for post in notes limit:3 %}
+    <a class="note" href="{{ root }}{{ post.url }}">
+      <span class="mono">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <strong>{{ post.title }}</strong>
+      <span class="ex">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 24 }}</span>
+    </a>
+    {% endfor %}
+  </div>
+  <p><a href="{{ root }}/posts">All posts</a></p>
+</section>
+
+<section class="wrap two">
+  <div id="about">
+    <h2>About</h2>
+    <div class="about">
+      <img src="{{ img }}{{ site.data.home.about.photo }}" alt="Laszlo Andrasi" loading="lazy">
+      <div><p>{{ site.data.home.about.text }}</p><p><a href="{{ root }}/about">More about me</a></p></div>
+    </div>
+  </div>
+  <div id="commissions">
+    <h2>Commissions</h2>
+    <div class="comm">
+      {% for c in site.data.home.commissions %}
+      <figure><img src="{{ img }}{{ c.img }}" alt="{{ c.label }}" loading="lazy"><figcaption>{{ c.label }}</figcaption></figure>
+      {% endfor %}
+    </div>
+    <a class="btn-o" href="{{ root }}/contact">Ask about a house portrait</a>
+  </div>
+</section>
+
+<section class="wrap last">
+  <h2>Follow</h2>
+  <div class="follow">
+    {% for f in site.data.home.follow %}<a href="{{ f.url }}">{{ f.label }}</a>{% endfor %}
+  </div>
+</section>
+
+<script>
+  window.AP_ROOT = "{{ root }}";
+  window.AP_COOP = window.matchMedia && matchMedia('(max-width: 767px)').matches;
+  window.AP_BUILDINGS = {{ site.data.buildings | jsonify }};
+</script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+<script src="https://laz-ap.github.io/thoughts/assets/map/map.js" defer></script>
+</body>
+</html>

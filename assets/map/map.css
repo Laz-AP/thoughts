@@ -10,10 +10,10 @@ header b{font-size:18px}
 #regions button{flex:none;min-height:44px;padding:0 14px;border:1px solid var(--ink);background:#fff;font:500 14px inherit;font-family:inherit;cursor:pointer}
 #regions button[aria-pressed=true]{background:var(--ink);color:#fff}
 .rh{font:500 12px 'DM Mono',monospace;color:var(--mute);text-transform:uppercase;margin:14px 0 8px}
-main{position:relative;height:calc(100vh - 114px);height:calc(100dvh - 114px)}
+#main{position:relative;height:calc(100vh - 114px);height:calc(100dvh - 114px)}
 #map{position:absolute;inset:0}
 #list{display:none;position:absolute;inset:0;overflow:auto;padding:16px;background:var(--bg)}
-main.list #list{display:block}main.list #map{visibility:hidden}
+#main.list #list{display:block}#main.list #map{visibility:hidden}
 .item{display:flex;gap:12px;width:100%;text-align:left;background:#fff;border:1px solid var(--ink);padding:10px;margin-bottom:10px;cursor:pointer;font:inherit}
 .item img{width:72px;height:72px;object-fit:cover;border:1px solid var(--line)}
 .item-ph{width:72px;height:72px;flex:none;background:var(--line);border:1px solid var(--line)}
@@ -40,7 +40,7 @@ main.list #list{display:block}main.list #map{visibility:hidden}
 
 header a.home{color:var(--ink);text-decoration:none;font-weight:700;font-size:18px}
 .legend{max-width:calc(100% - 24px)}
-main.has-card .legend{display:none}
+#main.has-card .legend{display:none}
 @media(max-width:767px){
   header{padding:4px 12px;min-height:52px}
   header a.home{font-size:16px}
@@ -49,3 +49,5 @@ main.has-card .legend{display:none}
 }
 .noscript{padding:24px;font-size:16px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.legend i.o{background:#d9d6cf;border:1px solid #9a968d}

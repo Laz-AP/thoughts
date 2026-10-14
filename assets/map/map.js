@@ -15,6 +15,15 @@ function open(b){
 const regions=[...new Set(B.map(b=>b.region||'Other'))];
 $('list').innerHTML=regions.map(r=>`<div class="rh">${esc(r)}</div>`+B.filter(b=>(b.region||'Other')===r).map(b=>`<button class="item" data-id="${b.id}">${b.sketch?`<img src="${IMG(b.sketch)}" alt="">`:`<span class="item-ph"></span>`}<span><b>${esc(b.name)}</b><br><small>${esc(b.story)}</small><br>${esc(b.summary)}</span></button>`).join('')).join('');
 $('list').querySelectorAll('.item').forEach(e=>e.onclick=()=>{const b=B.find(x=>x.id===e.dataset.id);view(false);open(b);goTo(b)});
+
+(function(){
+  const L={video:['Video made',''],project:['Built project','k'],site:['Site only','s']};
+  const kinds=[...new Set(B.map(b=>b.kind))].filter(k=>L[k]);
+  const el=$('legend');
+  if(el)el.innerHTML=kinds.map(k=>`<i class="${L[k][1]}"></i>${L[k][0]}`).join(' &nbsp; ')+(kinds.length?' &nbsp; ':'')+'<i class="o"></i>Other';
+  const rg=$('regions');
+  if(rg&&regions.length<2)rg.style.display='none';
+})();
 let map=null;
 function goTo(b){if(map)map.flyTo({center:[b.lng,b.lat],zoom:17,duration:RM?0:900})}
 function fitTo(list){
@@ -36,7 +45,7 @@ function closeCard(){card.classList.remove('open');main.classList.remove('has-ca
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCard()});
 const COLORS={video:['#f88379','#c4493e'],site:['#fbd0cb','#c4493e'],project:['#1a1a1a','#1a1a1a']};
 try{
-  map=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/positron',center:[-87.6305,41.8788],zoom:14.6,attributionControl:{compact:true}});
+  map=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/positron',center:[-87.6305,41.8788],zoom:14.6,attributionControl:{compact:true},cooperativeGestures:!!window.AP_COOP});
   map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-left');
   const pins={}, outlined={};
   B.forEach(b=>{
